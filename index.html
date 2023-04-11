@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--====================================== UNICONS ======================================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <!--====================================== GOOGLE FONTS ======================================-->
     <!-- Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,6 +17,26 @@
 
 <body>
 
+    <main>
+        <section class="game section">
+            <div class="container game-container">
+                <div class="game-dividers" id="game-divider-1" onclick="addMark(1)"></div>
+                <div class="game-dividers" id="game-divider-2" onclick="addMark(2)"></div>
+                <div class="game-dividers" id="game-divider-3" onclick="addMark(3)"></div>
+                <div class="game-dividers" id="game-divider-4" onclick="addMark(4)"></div>
+                <div class="game-dividers" id="game-divider-5" onclick="addMark(5)"></div>
+                <div class="game-dividers" id="game-divider-6" onclick="addMark(6)"></div>
+                <div class="game-dividers" id="game-divider-7" onclick="addMark(7)"></div>
+                <div class="game-dividers" id="game-divider-8" onclick="addMark(8)"></div>
+                <div class="game-dividers" id="game-divider-9" onclick="addMark(9)"></div>
+            </div>
+            <button class="reset" onclick="reset()">Reset</button>
+
+        </section>
+    </main>
+
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

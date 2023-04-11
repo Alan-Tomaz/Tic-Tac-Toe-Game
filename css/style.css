@@ -1,5 +1,133 @@
+/* --================== VARIABLES CSS ================== */
+:root {
+
+    /* ======== COLORS ========= */
+    --body-color: #434656;
+
+    /* ======== FONT SIZE ========= */
+    --big-font-size: 2rem;
+
+
+    /* ======== FONT WEIGHT ========= */
+    --font-semi-bold: 600;
+
+    /* ======== BORDERS ========= */
+    --border: 3px solid black;
+}
+
+/* ============== ELEMENTS STYLES ================  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============== LAYOUT ================  */
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+    overflow: hidden;
+
+}
+
+.container {
+    width: 55vw;
+    height: 85vh;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#game-divider-1,
+#game-divider-2,
+#game-divider-4,
+#game-divider-5 {
+    border: var(--border);
+    border-top: none;
+    border-left: none;
+}
+
+#game-divider-3,
+#game-divider-6 {
+    border: var(--border);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#game-divider-7,
+#game-divider-8 {
+    border-right: var(--border);
+}
+
+.game-dividers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-dividers:hover {
+    cursor: pointer;
+}
+
+.reset {
+    height: fit-content;
+    padding: 1.5rem 2rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #000;
+    border-radius: .5rem;
+    font-weight: var(--font-semi-bold);
+    font-size: var(--big-font-size);
+    cursor: pointer;
+    align-self: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .section {
+        padding: 3rem;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .container {
+        height: 70vh;
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section {
+        padding: 0rem;
+        height: 95vh;
+    }
+
+    .container {
+        height: 65vh;
+        width: 95vw;
+    }
+
+    .game-dividers {
+        padding: 1rem;
+    }
 }
